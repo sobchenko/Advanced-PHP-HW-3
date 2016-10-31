@@ -6,13 +6,11 @@ use Competition\Rules\RulesInterface;
 
 class Karate extends AbstractSport implements SportInterface
 {
-
     /**
      * {@inheritdoc}
      */
     public function makeDraw(array $participants, RulesInterface $rules)
     {
-
     }
 
     /**
@@ -20,7 +18,6 @@ class Karate extends AbstractSport implements SportInterface
      */
     public function runCompetition(array $data)
     {
-
     }
 
     /**

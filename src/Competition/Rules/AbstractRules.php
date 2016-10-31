@@ -2,7 +2,6 @@
 
 namespace Competition\Rules;
 
-
 abstract class AbstractRules
 {
     private $judgesList;

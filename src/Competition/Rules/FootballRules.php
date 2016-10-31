@@ -2,12 +2,10 @@
 
 namespace Competition\Rules;
 
-
 class FootballRules implements RulesInterface
 {
-
     /**
-     * @var array $rulesList
+     * @var array
      */
     private $rulesList;
 
@@ -29,7 +27,6 @@ class FootballRules implements RulesInterface
      */
     public function prepareParticipants(array $participants)
     {
-
     }
 
     /**
@@ -45,7 +42,6 @@ class FootballRules implements RulesInterface
      */
     public function checkJudges(array $judgeList)
     {
-
     }
 
     /**
@@ -53,7 +49,5 @@ class FootballRules implements RulesInterface
      */
     public function checkParticipants(array $participants)
     {
-
     }
-
 }

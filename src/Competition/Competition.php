@@ -10,21 +10,21 @@ class Competition
     /**
      * @var SportInterface
      */
-    private  $sports;
+    private $sports;
 
     /**
      * @var array
      */
-    private  $competitionState;
+    private $competitionState;
 
     /**
      * @var array
      */
-    private  $participants;
+    private $participants;
 
     /**
      * @param SportInterface $sports
-     * @param array $participants
+     * @param array          $participants
      */
     public function __construct($participants, SportInterface $sports)
     {
@@ -34,6 +34,7 @@ class Competition
 
     /**
      * @param RulesInterface $rules
+     *
      * @return array
      */
     public function createDraw(RulesInterface $rules)
@@ -41,11 +42,13 @@ class Competition
         $preparedParticipants = $rules->prepareParticipants($this->participants);
         $drawData = $this->sports->makeDraw($preparedParticipants, $rules);
         $preparedDrawData = $this->initiateCompetition($drawData);
+
         return $this->sports->runCompetition($preparedDrawData);
     }
 
     /**
      * @param RulesInterface $rules
+     *
      * @return array
      */
     private function getCurrentCompetitionState(RulesInterface $rules)
@@ -53,9 +56,9 @@ class Competition
         return $this->sports->calculateCurrentState($rules, $this->competitionState);
     }
 
-
     /**
      * @param array $data
+     *
      * @return array
      */
     protected function initiateCompetition(array $data)
@@ -65,11 +68,11 @@ class Competition
 
     /**
      * @param array $data
+     *
      * @return array
      */
     protected function changeCompetitionState(array $data)
     {
         return $this->competitionState = $data;
     }
-
 }

@@ -4,7 +4,6 @@ namespace Competition\Sport;
 
 use Competition\Rules\RulesInterface;
 
-
 abstract class AbstractSport
 {
     /**
@@ -23,6 +22,7 @@ abstract class AbstractSport
     /**
      * @param RulesInterface $competitionRules
      * @param RulesInterface $competitionRules
+     *
      * @return array of current competition state
      */
     protected function calculateState(RulesInterface $competitionRules, $competitionState)
@@ -31,5 +31,4 @@ abstract class AbstractSport
         // do something with $competitionState depending on $competitionRules
         return $data;
     }
-
 }
