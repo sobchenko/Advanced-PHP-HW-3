@@ -23,4 +23,11 @@ class Karate extends AbstractSport implements SportInterface
 
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function calculateCurrentState(RulesInterface $competitionRules, array $competitionState)
+    {
+        return $this->calculateState($competitionRules, $competitionState);
+    }
 }

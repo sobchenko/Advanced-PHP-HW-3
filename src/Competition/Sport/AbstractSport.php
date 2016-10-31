@@ -25,7 +25,7 @@ abstract class AbstractSport
      * @param RulesInterface $competitionRules
      * @return array of current competition state
      */
-    private function calculateCurrentState(RulesInterface $competitionRules, $competitionState)
+    protected function calculateState(RulesInterface $competitionRules, $competitionState)
     {
         $data = $this->participants;
         // do something with $competitionState depending on $competitionRules
