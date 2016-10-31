@@ -38,7 +38,7 @@ class Competition
      */
     public function createDraw(RulesInterface $rules)
     {
-        $preparedParticipants = $rules->prepareParticipant($this->participants);
+        $preparedParticipants = $rules->prepareParticipants($this->participants);
         $drawData = $this->sports->makeDraw($preparedParticipants, $rules);
         $preparedDrawData = $this->initiateCompetition($drawData);
         return $this->sports->runCompetition($preparedDrawData);
