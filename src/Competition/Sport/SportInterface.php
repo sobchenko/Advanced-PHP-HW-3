@@ -18,4 +18,13 @@ interface SportInterface
      * @return array
      */
     public function runCompetition(array $data);
+
+
+    /**
+     * @param RulesInterface $rules
+     * @param array $states
+     * @return array
+     */
+    public function calculateCurrentState(RulesInterface $rules, array $states);
+
 }
