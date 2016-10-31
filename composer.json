@@ -1,0 +1,21 @@
+{
+    "name": "sobchenko/competition",
+    "description": "You want to organize sports competition? Now it is very easy to realize",
+    "type": "library",
+    "keywords": ["sport", "competition"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sobchenko Ihor",
+            "email": "sobchenko.ihor@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Competition\\": "src"
+        }
+    }
+}
